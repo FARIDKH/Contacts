@@ -60,17 +60,41 @@
 		2E84F7DB2084D668007BFCCB /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				2E84F7EE2084DD8E007BFCCB /* ContactsTableViewController.swift */,
-				2E84F7F22084FBAC007BFCCB /* Data.swift */,
-				2E84F7F02084F91D007BFCCB /* ContactTableViewCell.swift */,
-				2E84F7DC2084D668007BFCCB /* AppDelegate.swift */,
+				2E84F7FF208520EF007BFCCB /* Models */,
+				2E84F800208520F8007BFCCB /* Views */,
+				2E84F7FE208520DB007BFCCB /* Controllers */,
 				2E84F7E02084D668007BFCCB /* Main.storyboard */,
-				2E84F7FC20851B27007BFCCB /* ContactUserViewController.swift */,
 				2E84F7E32084D668007BFCCB /* Assets.xcassets */,
+				2E84F7DC2084D668007BFCCB /* AppDelegate.swift */,
 				2E84F7E52084D668007BFCCB /* LaunchScreen.storyboard */,
 				2E84F7E82084D668007BFCCB /* Info.plist */,
 			);
 			path = Contacts;
+			sourceTree = "<group>";
+		};
+		2E84F7FE208520DB007BFCCB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2E84F7EE2084DD8E007BFCCB /* ContactsTableViewController.swift */,
+				2E84F7FC20851B27007BFCCB /* ContactUserViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2E84F7FF208520EF007BFCCB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E84F7F22084FBAC007BFCCB /* Data.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2E84F800208520F8007BFCCB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E84F7F02084F91D007BFCCB /* ContactTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

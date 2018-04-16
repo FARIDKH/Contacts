@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactUserViewController: UIViewController {
+class ContactUserViewController: UIViewController, UINavigationControllerDelegate {
 
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
@@ -16,9 +16,25 @@ class ContactUserViewController: UIViewController {
     @IBOutlet weak var userEmail: UILabel!
     @IBOutlet weak var userNote: UILabel!
     
+    var image: UIImage?
+    var name: String?
+    var mobile: String?
+    var email: String?
+    var note: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "Info Card"
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        userImage.layer.cornerRadius = userImage.frame.size.width / 2
+        userImage.clipsToBounds = true
+        
+        
+        userImage.image = image
+        userName.text = name
+        userMobile.text = mobile
+        userEmail.text = email
+        userNote.text = note
         // Do any additional setup after loading the view.
     }
 

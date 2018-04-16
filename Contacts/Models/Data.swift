@@ -17,13 +17,7 @@ class Data : NSObject {
             "email" : "keith@gmail.com",
             "notes" : "keith ozun tanimir"
         ],
-        [
-            "name" : "Farid Ganbarli",
-            "avatar" : "pic",
-            "mobile"  : "323-13-2",
-            "email" : "farid@gmailcom",
-            "notes" : "Farid developerdi"
-        ],
+        
         [
             "name" : "Yusif Ehmedov",
             "avatar" : "pic",
@@ -33,11 +27,12 @@ class Data : NSObject {
         ],
         [
             "name" : "Eldar Qanbali",
-            "avatar" : "pic",
+            "avatar" : "Default Profile Picture",
             "mobile"  : "23131-321",
             "email" : "Eldar emogludu",
             "notes" : "eldar@montin.ru"
         ],
+        
     ]
     static var fullContacts = [
         [

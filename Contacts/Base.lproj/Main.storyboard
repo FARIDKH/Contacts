@@ -14,7 +14,7 @@
         <scene sceneID="vcN-XP-hmo">
             <objects>
                 <tableViewController id="FeR-od-T0x" customClass="ContactsTableViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rgV-0o-Ixb">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rgV-0o-Ixb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="87"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g0V-gd-y5P" id="YLd-q5-Y68">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="87"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="86.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="prK-qq-glv">
@@ -51,7 +51,6 @@
                                 <connections>
                                     <outlet property="userImage" destination="prK-qq-glv" id="Sra-su-u1b"/>
                                     <outlet property="userName" destination="J2F-0f-rnW" id="AJB-05-kfH"/>
-                                    <segue destination="ARr-xK-Tdb" kind="show" identifier="goToSpecificUser" id="qU9-qr-SdR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -69,6 +68,9 @@
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="ARr-xK-Tdb" kind="show" identifier="goToSpecificUser" id="n8Z-6v-NMD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gN8-9l-dNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,12 +79,12 @@
         <!--Contact User View Controller-->
         <scene sceneID="mva-EB-r4V">
             <objects>
-                <viewController id="ARr-xK-Tdb" customClass="ContactUserViewController" sceneMemberID="viewController">
+                <viewController id="ARr-xK-Tdb" customClass="ContactUserViewController" customModule="Contacts" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XZv-5t-ODQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y2Y-cU-Bvw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y2Y-cU-Bvw">
                                 <rect key="frame" x="12" y="89" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Oar-se-rzv"/>
@@ -95,7 +97,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hue-DC-WFN">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.45654433965682983" green="0.69497054815292358" blue="0.97584468126296997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fariddspijisjdo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QT7-cA-abb">
@@ -112,7 +114,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzD-Rd-rh1">
                                         <rect key="frame" x="0.0" y="0.0" width="51.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.45654433965682983" green="0.69497054815292358" blue="0.97584468126296997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123-123-213" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d93-Ce-z6Z">
@@ -129,7 +131,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZK-ic-frg">
                                         <rect key="frame" x="0.0" y="0.0" width="41" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.45654433965682983" green="0.69497054815292358" blue="0.97584468126296997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="first.last@icloud.ocm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcJ-VB-V5C">
@@ -146,7 +148,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gX-yi-hVO">
                                         <rect key="frame" x="0.0" y="0.0" width="45.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.45654433965682983" green="0.69497054815292358" blue="0.97584468126296997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The quick brown lazy dog for now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuB-pD-o9i">
@@ -178,11 +180,11 @@
                         <viewLayoutGuide key="safeArea" id="38y-bu-Yoh"/>
                     </view>
                     <connections>
-                        <outlet property="userEmail" destination="JcJ-VB-V5C" id="gPA-Kw-e4q"/>
-                        <outlet property="userImage" destination="y2Y-cU-Bvw" id="UsJ-jx-f9T"/>
-                        <outlet property="userMobile" destination="d93-Ce-z6Z" id="ehb-Ym-nQp"/>
-                        <outlet property="userName" destination="QT7-cA-abb" id="q8b-H1-Fgr"/>
-                        <outlet property="userNote" destination="QuB-pD-o9i" id="4Hk-LF-ktL"/>
+                        <outlet property="userEmail" destination="JcJ-VB-V5C" id="ezH-vO-nss"/>
+                        <outlet property="userImage" destination="y2Y-cU-Bvw" id="2cs-t8-Lsi"/>
+                        <outlet property="userMobile" destination="d93-Ce-z6Z" id="DmK-h3-2CV"/>
+                        <outlet property="userName" destination="QT7-cA-abb" id="dEf-st-E6M"/>
+                        <outlet property="userNote" destination="QuB-pD-o9i" id="syO-zB-eRG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HI8-hB-yyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
